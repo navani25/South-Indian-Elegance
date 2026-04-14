@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Azhagi | South Indian Elegance</title>
+  
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        container: {
+          center: true,
+          padding: "2rem",
+          screens: {
+            "2xl": "1400px",
+          },
+        },
+        extend: {
+          fontFamily: {
+            serif: ["Playfair Display", "serif"],
+            sans: ["Inter", "sans-serif"],
+          },
+          colors: {
+            border: "hsl(var(--border))",
+            input: "hsl(var(--input))",
+            ring: "hsl(var(--ring))",
+            background: "hsl(var(--background))",
+            foreground: "hsl(var(--foreground))",
+            primary: {
+              DEFAULT: "hsl(var(--primary))",
+              foreground: "hsl(var(--primary-foreground))",
+            },
+            secondary: {
+              DEFAULT: "hsl(var(--secondary))",
+              foreground: "hsl(var(--secondary-foreground))",
+            },
+            destructive: {
+              DEFAULT: "hsl(var(--destructive))",
+              foreground: "hsl(var(--destructive-foreground))",
+            },
+            muted: {
+              DEFAULT: "hsl(var(--muted))",
+              foreground: "hsl(var(--muted-foreground))",
+            },
+            accent: {
+              DEFAULT: "hsl(var(--accent))",
+              foreground: "hsl(var(--accent-foreground))",
+            },
+            popover: {
+              DEFAULT: "hsl(var(--popover))",
+              foreground: "hsl(var(--popover-foreground))",
+            },
+            card: {
+              DEFAULT: "hsl(var(--card))",
+              foreground: "hsl(var(--card-foreground))",
+            },
+            gold: {
+              DEFAULT: "hsl(var(--gold))",
+              light: "hsl(var(--gold-light))",
+            },
+            "rose-gold": {
+              DEFAULT: "hsl(var(--rose-gold))",
+              light: "hsl(var(--rose-gold-light))",
+            },
+          },
+          borderRadius: {
+            lg: "var(--radius)",
+            md: "calc(var(--radius) - 2px)",
+            sm: "calc(var(--radius) - 4px)",
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-background text-foreground font-sans">
+  <!-- Navbar -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent py-5 text-white">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <a href="#home" class="font-serif text-2xl font-bold tracking-wide">
+        <span class="gold-text">Azhagi</span>
+      </a>
+
+      <!-- Desktop -->
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="#home" class="text-sm font-sans font-medium tracking-wide transition-colors duration-300 hover:text-gold">Home</a></li>
+        <li><a href="#services" class="text-sm font-sans font-medium tracking-wide transition-colors duration-300 hover:text-gold">Services</a></li>
+        <li><a href="#gallery" class="text-sm font-sans font-medium tracking-wide transition-colors duration-300 hover:text-gold">Gallery</a></li>
+        <li><a href="#about" class="text-sm font-sans font-medium tracking-wide transition-colors duration-300 hover:text-gold">About</a></li>
+        <li><a href="#testimonials" class="text-sm font-sans font-medium tracking-wide transition-colors duration-300 hover:text-gold">Testimonials</a></li>
+        <li><a href="#booking" class="text-sm font-sans font-medium tracking-wide transition-colors duration-300 hover:text-gold gold-gradient px-5 py-2 rounded-full text-primary-foreground font-semibold">Book Now</a></li>
+        <li><a href="#contact" class="text-sm font-sans font-medium tracking-wide transition-colors duration-300 hover:text-gold">Contact</a></li>
+      </ul>
+
+      <!-- Mobile toggle -->
+      <button id="mobile-menu-btn" class="md:hidden transition-colors duration-300" aria-label="Toggle menu">
+        <i data-lucide="menu"></i>
+      </button>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="hidden md:hidden bg-background/95 backdrop-blur-lg border-t border-border animate-fade-in absolute w-full left-0 top-full shadow-lg">
+      <ul class="flex flex-col items-center gap-4 py-6">
+        <li><a href="#home" class="text-base font-sans font-medium text-foreground/80 hover:text-gold transition-colors">Home</a></li>
+        <li><a href="#services" class="text-base font-sans font-medium text-foreground/80 hover:text-gold transition-colors">Services</a></li>
+        <li><a href="#gallery" class="text-base font-sans font-medium text-foreground/80 hover:text-gold transition-colors">Gallery</a></li>
+        <li><a href="#about" class="text-base font-sans font-medium text-foreground/80 hover:text-gold transition-colors">About</a></li>
+        <li><a href="#testimonials" class="text-base font-sans font-medium text-foreground/80 hover:text-gold transition-colors">Testimonials</a></li>
+        <li><a href="#booking" class="text-base font-sans font-medium text-foreground/80 hover:text-gold transition-colors">Book Now</a></li>
+        <li><a href="#contact" class="text-base font-sans font-medium text-foreground/80 hover:text-gold transition-colors">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- HeroSection -->
+  <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0">
+      <img src="./assets/hero-bride.jpg" alt="South Indian Bride" class="w-full h-full object-cover"/>
+      <div class="absolute inset-0 bg-gradient-to-r from-foreground/70 via-foreground/40 to-transparent"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-foreground/50 to-transparent"></div>
+    </div>
+    <div class="relative z-10 container mx-auto px-4 text-center md:text-left">
+      <div class="max-w-2xl">
+        <p class="text-gold-light font-sans text-sm md:text-base tracking-[0.3em] uppercase mb-4 opacity-0 animate-fade-up" style="animation-delay: 0.2s">
+          Premium Beauty Services
+        </p>
+        <h1 class="font-serif text-4xl md:text-6xl lg:text-7xl font-bold text-primary-foreground leading-tight mb-6 opacity-0 animate-fade-up" style="animation-delay: 0.4s">
+          Elegance Redefined for Your <span class="gold-text">Special Moments</span>
+        </h1>
+        <p class="text-primary-foreground/80 font-sans text-base md:text-lg mb-8 max-w-lg opacity-0 animate-fade-up" style="animation-delay: 0.6s">
+          From bridal makeup to intricate Aari work, we craft timeless beauty rooted in South Indian tradition.
+        </p>
+        <div class="opacity-0 animate-fade-up" style="animation-delay: 0.8s">
+          <a href="#booking" class="inline-block gold-gradient px-8 py-4 rounded-full font-sans font-semibold text-primary-foreground tracking-wide shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 gold-border-glow">
+            Book Now
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-0 right-0 w-64 h-64 opacity-10 font-serif">
+      <svg viewBox="0 0 200 200" class="w-full h-full text-gold">
+        <circle cx="100" cy="100" r="90" fill="none" stroke="currentColor" stroke-width="0.5" />
+        <circle cx="100" cy="100" r="70" fill="none" stroke="currentColor" stroke-width="0.5" />
+        <circle cx="100" cy="100" r="50" fill="none" stroke="currentColor" stroke-width="0.5" />
+        <circle cx="100" cy="100" r="30" fill="none" stroke="currentColor" stroke-width="0.5" />
+      </svg>
+    </div>
+  </section>
+
+  <!-- ServicesSection -->
+  <section id="services" class="py-24 mandala-overlay">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <p class="text-gold font-sans text-sm tracking-[0.3em] uppercase mb-3">What We Offer</p>
+        <h2 class="section-heading">Our <span class="gold-text">Services</span></h2>
+        <p class="section-subheading mt-4">Each service is crafted with passion, precision, and a deep love for South Indian beauty traditions.</p>
+      </div>
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0s">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="palette" class="w-7 h-7 text-primary-foreground"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Makeup</h3>
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Flawless looks blending traditional beauty with modern trends for your perfect day.</p>
+        </div>
+        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.1s">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="scissors" class="w-7 h-7 text-primary-foreground"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Hairstyling</h3>
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Elegant updos, braids, and traditional styles perfectly matched to your event.</p>
+        </div>
+        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.2s">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="pen-tool" class="w-7 h-7 text-primary-foreground"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Mehndi</h3>
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Intricate and beautiful bridal and guest mehndi designs tailored to your preferences.</p>
+        </div>
+        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.3s">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="sparkles" class="w-7 h-7 text-primary-foreground"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Saree pre-pleating</h3>
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Perfectly pleated sarees ready to drape in minutes. Professional pre-pleating for all fabrics.</p>
+        </div>
+        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.4s">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="layers" class="w-7 h-7 text-primary-foreground"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Saree draping</h3>
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Flawless, secure, and comfortable saree draping in various traditional and modern styles.</p>
+        </div>
+        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.5s">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="gem" class="w-7 h-7 text-primary-foreground"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Aari work</h3>
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Exquisite hand-embroidered Aari designs on blouses and sarees, featuring intricate motifs.</p>
+        </div>
+        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.6s">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="crown" class="w-7 h-7 text-primary-foreground"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Hair accessories</h3>
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Curated collection of premium hair clips, pins, and bridal accessories in stunning finishes.</p>
+        </div>
+        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.7s">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="hand" class="w-7 h-7 text-primary-foreground"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Nail art</h3>
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Beautiful and elegant nail art designs to complete your gorgeous bridal or party look.</p>
+        </div>
+        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.8s">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="link" class="w-7 h-7 text-primary-foreground"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Chain</h3>
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Traditional and modern chains available to completely elevate your elegance.</p>
+        </div>
+        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.9s">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="link-2" class="w-7 h-7 text-primary-foreground"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Invisible chain</h3>
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Trendy and subtle invisible chains for a minimalist and modern aesthetic.</p>
+        </div>
+        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 1.0s">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="diamond" class="w-7 h-7 text-primary-foreground"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Rental jewellery</h3>
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Premium bridal jewelry sets available for rent, making you shine on your big day.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GallerySection -->
+  <section id="gallery" class="py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <p class="text-gold font-sans text-sm tracking-[0.3em] uppercase mb-3">Our Work</p>
+        <h2 class="section-heading">Portfolio <span class="gold-text">Gallery</span></h2>
+        <p class="section-subheading mt-4">A glimpse into the artistry and elegance we bring to every client.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto">
+        <div class="relative group overflow-hidden rounded-xl gold-border-glow aspect-square cursor-pointer">
+          <img src="./assets/gallery-makeup.jpg" alt="Bridal Makeup" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent transition-opacity duration-500 flex items-end p-5 opacity-0 group-hover:opacity-100">
+            <div><p class="text-primary-foreground font-serif text-lg font-semibold">Bridal Makeup</p><p class="text-gold-light font-sans text-xs tracking-wider uppercase">Makeup</p></div>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl gold-border-glow aspect-square cursor-pointer">
+          <img src="./assets/gallery-hair.jpg" alt="Hairstyling" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent transition-opacity duration-500 flex items-end p-5 opacity-0 group-hover:opacity-100">
+            <div><p class="text-primary-foreground font-serif text-lg font-semibold">Elegant Hairstyling</p><p class="text-gold-light font-sans text-xs tracking-wider uppercase">Hairstyling</p></div>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl gold-border-glow aspect-square cursor-pointer">
+          <img src="./assets/gallery-mehndi.png" alt="Mehndi" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent transition-opacity duration-500 flex items-end p-5 opacity-0 group-hover:opacity-100">
+            <div><p class="text-primary-foreground font-serif text-lg font-semibold">Mehndi Designs</p><p class="text-gold-light font-sans text-xs tracking-wider uppercase">Mehndi</p></div>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl gold-border-glow aspect-square cursor-pointer">
+          <img src="./assets/gallery-saree-pleating.png" alt="Saree Pre-Pleating" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent transition-opacity duration-500 flex items-end p-5 opacity-0 group-hover:opacity-100">
+            <div><p class="text-primary-foreground font-serif text-lg font-semibold">Saree Pre-Pleating</p><p class="text-gold-light font-sans text-xs tracking-wider uppercase">Pre-Pleating</p></div>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl gold-border-glow aspect-square cursor-pointer">
+          <img src="./assets/gallery-saree.jpg" alt="Saree Draping" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent transition-opacity duration-500 flex items-end p-5 opacity-0 group-hover:opacity-100">
+            <div><p class="text-primary-foreground font-serif text-lg font-semibold">Saree Draping</p><p class="text-gold-light font-sans text-xs tracking-wider uppercase">Saree Draping</p></div>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl gold-border-glow aspect-square cursor-pointer">
+          <img src="./assets/gallery-aari.jpg" alt="Aari Embroidery" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent transition-opacity duration-500 flex items-end p-5 opacity-0 group-hover:opacity-100">
+            <div><p class="text-primary-foreground font-serif text-lg font-semibold">Aari Embroidery</p><p class="text-gold-light font-sans text-xs tracking-wider uppercase">Aari Work</p></div>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl gold-border-glow aspect-square cursor-pointer">
+          <img src="./assets/gallery-clips.jpg" alt="Hair Accessories" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent transition-opacity duration-500 flex items-end p-5 opacity-0 group-hover:opacity-100">
+            <div><p class="text-primary-foreground font-serif text-lg font-semibold">Hair Accessories</p><p class="text-gold-light font-sans text-xs tracking-wider uppercase">Accessories</p></div>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl gold-border-glow aspect-square cursor-pointer">
+          <img src="./assets/gallery-nailart.png" alt="Nail Art" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent transition-opacity duration-500 flex items-end p-5 opacity-0 group-hover:opacity-100">
+            <div><p class="text-primary-foreground font-serif text-lg font-semibold">Elegant Nail Art</p><p class="text-gold-light font-sans text-xs tracking-wider uppercase">Nail Art</p></div>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl gold-border-glow aspect-square cursor-pointer">
+          <img src="./assets/gallery-chain.png" alt="Gold Chains" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent transition-opacity duration-500 flex items-end p-5 opacity-0 group-hover:opacity-100">
+            <div><p class="text-primary-foreground font-serif text-lg font-semibold">Gold Chains</p><p class="text-gold-light font-sans text-xs tracking-wider uppercase">Chain</p></div>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl gold-border-glow aspect-square cursor-pointer">
+          <img src="./assets/gallery-invisible-chain.png" alt="Invisible Chains" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent transition-opacity duration-500 flex items-end p-5 opacity-0 group-hover:opacity-100">
+            <div><p class="text-primary-foreground font-serif text-lg font-semibold">Invisible Chains</p><p class="text-gold-light font-sans text-xs tracking-wider uppercase">Invisible Chain</p></div>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl gold-border-glow aspect-square cursor-pointer">
+          <img src="./assets/gallery-jewellery.png" alt="Rental Jewellery" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent transition-opacity duration-500 flex items-end p-5 opacity-0 group-hover:opacity-100">
+            <div><p class="text-primary-foreground font-serif text-lg font-semibold">Premium Jewellery</p><p class="text-gold-light font-sans text-xs tracking-wider uppercase">Rental Jewellery</p></div>
+          </div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl gold-border-glow aspect-square cursor-pointer">
+          <img src="./assets/gallery-bridal.jpg" alt="Bridal Look" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+          <div class="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent transition-opacity duration-500 flex items-end p-5 opacity-0 group-hover:opacity-100">
+            <div><p class="text-primary-foreground font-serif text-lg font-semibold">Complete Look</p><p class="text-gold-light font-sans text-xs tracking-wider uppercase">Bridal Makeover</p></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BeforeAfterSlider -->
+  <section class="py-24 bg-muted/30">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-gold font-sans text-sm tracking-[0.3em] uppercase mb-3">See The Magic</p>
+        <h2 class="section-heading">Before & <span class="gold-text">After</span></h2>
+      </div>
+      <div class="max-w-2xl mx-auto">
+        <div id="ba-slider" class="relative aspect-square rounded-2xl overflow-hidden gold-border-glow cursor-col-resize select-none touch-none">
+          <img src="./assets/before-after.jpg" class="w-full h-full object-cover" alt="After Makeup Transformation" />
+          <div id="ba-before" class="absolute inset-0 overflow-hidden" style="clip-path: inset(0 50% 0 0)">
+            <img src="./assets/before-after.jpg" class="w-full h-full object-cover grayscale brightness-90" alt="Before" />
+            <div class="absolute top-4 left-4 bg-foreground/60 backdrop-blur-sm px-3 py-1 rounded-full pointer-events-none">
+              <span class="font-sans text-xs text-primary-foreground font-medium tracking-wider uppercase">Before</span>
+            </div>
+          </div>
+          <div class="absolute top-4 right-4 bg-foreground/60 backdrop-blur-sm px-3 py-1 rounded-full pointer-events-none">
+            <span class="font-sans text-xs text-primary-foreground font-medium tracking-wider uppercase">After</span>
+          </div>
+          <div id="ba-line" class="absolute top-0 bottom-0 w-0.5 bg-gold shadow-lg" style="left: 50%;">
+            <div class="absolute top-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 rounded-full gold-gradient flex items-center justify-center shadow-lg pointer-events-none">
+              <svg width="16" height="16" viewBox="0 0 16 16" class="text-primary-foreground">
+                <path d="M5 3L1 8L5 13M11 3L15 8L11 13" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AboutSection -->
+  <section id="about" class="py-24">
+    <div class="container mx-auto px-4">
+      <div class="max-w-4xl mx-auto text-center">
+        <p class="text-gold font-sans text-sm tracking-[0.3em] uppercase mb-3">Our Story</p>
+        <h2 class="section-heading mb-8">About <span class="gold-text">Azhagi</span></h2>
+        <p class="font-sans text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
+          Born from a deep passion for South Indian beauty traditions, Azhagi is more than a beauty service — it's an experience. We believe every woman deserves to feel like a queen, especially on her most special day.
+        </p>
+        <p class="font-sans text-muted-foreground text-base md:text-lg leading-relaxed mb-12">
+          Our team of skilled artisans combines time-honored techniques with contemporary styles, ensuring each bride carries the grace of tradition and the glow of modern elegance. From intricate Aari embroidery to flawless bridal makeup, every detail is crafted with love and precision.
+        </p>
+        <div class="grid grid-cols-3 gap-6 max-w-lg mx-auto">
+          <div class="text-center">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-full gold-gradient flex items-center justify-center">
+              <i data-lucide="heart" class="w-5 h-5 text-primary-foreground"></i>
+            </div>
+            <p class="font-serif text-2xl font-bold text-foreground">500+</p>
+            <p class="font-sans text-xs text-muted-foreground mt-1">Happy Brides</p>
+          </div>
+          <div class="text-center">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-full gold-gradient flex items-center justify-center">
+              <i data-lucide="award" class="w-5 h-5 text-primary-foreground"></i>
+            </div>
+            <p class="font-serif text-2xl font-bold text-foreground">10+</p>
+            <p class="font-sans text-xs text-muted-foreground mt-1">Years Experience</p>
+          </div>
+          <div class="text-center">
+            <div class="w-12 h-12 mx-auto mb-3 rounded-full gold-gradient flex items-center justify-center">
+              <i data-lucide="clock" class="w-5 h-5 text-primary-foreground"></i>
+            </div>
+            <p class="font-serif text-2xl font-bold text-foreground">1000+</p>
+            <p class="font-sans text-xs text-muted-foreground mt-1">Events Styled</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TestimonialsSection -->
+  <section id="testimonials" class="py-24 bg-muted/30 mandala-overlay">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-16">
+        <p class="text-gold font-sans text-sm tracking-[0.3em] uppercase mb-3">Love From Our Clients</p>
+        <h2 class="section-heading">What They <span class="gold-text">Say</span></h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div class="glass-card rounded-2xl p-8 gold-border-glow hover:-translate-y-1 transition-all duration-300">
+          <div class="flex gap-1 mb-4 text-gold">
+            <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
+          </div>
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed mb-6 italic">"Azhagi made me feel like a goddess on my wedding day. The bridal makeup was absolutely flawless — every detail was perfect!"</p>
+          <div><p class="font-serif font-semibold text-foreground">Priya Lakshmi</p><p class="font-sans text-xs text-gold">Bridal Makeup</p></div>
+        </div>
+        <div class="glass-card rounded-2xl p-8 gold-border-glow hover:-translate-y-1 transition-all duration-300">
+          <div class="flex gap-1 mb-4 text-gold">
+            <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
+          </div>
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed mb-6 italic">"The Aari work on my blouse was stunning. Everyone at the wedding kept asking who did the embroidery. Truly masterful craftsmanship."</p>
+          <div><p class="font-serif font-semibold text-foreground">Kavitha Sundaram</p><p class="font-sans text-xs text-gold">Aari Work</p></div>
+        </div>
+        <div class="glass-card rounded-2xl p-8 gold-border-glow hover:-translate-y-1 transition-all duration-300">
+          <div class="flex gap-1 mb-4 text-gold">
+            <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
+            <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
+          </div>
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed mb-6 italic">"Their saree pre-pleating service saved me so much stress. The draping was perfect and lasted the entire event. Highly recommend!"</p>
+          <div><p class="font-serif font-semibold text-foreground">Meera Rajendran</p><p class="font-sans text-xs text-gold">Saree Pre-Pleating</p></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BookingSection -->
+  <section id="booking" class="py-24">
+    <div class="container mx-auto px-4">
+      <div class="max-w-xl mx-auto">
+        <div class="text-center mb-12">
+          <p class="text-gold font-sans text-sm tracking-[0.3em] uppercase mb-3">Reserve Your Spot</p>
+          <h2 class="section-heading">Book an <span class="gold-text">Appointment</span></h2>
+        </div>
+        <form id="booking-form" class="glass-card rounded-2xl p-8 md:p-10 gold-border-glow space-y-6">
+          <div>
+            <label class="block font-sans text-sm font-medium text-foreground mb-2">Full Name</label>
+            <input type="text" required placeholder="Enter your name" class="w-full px-4 py-3 rounded-lg bg-background border border-border font-sans text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all" />
+          </div>
+          <div>
+            <label class="block font-sans text-sm font-medium text-foreground mb-2">Phone Number</label>
+            <input type="tel" required placeholder="Enter your phone number" class="w-full px-4 py-3 rounded-lg bg-background border border-border font-sans text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all" />
+          </div>
+          <div>
+            <label class="block font-sans text-sm font-medium text-foreground mb-2">Service</label>
+            <select required class="w-full px-4 py-3 rounded-lg bg-background border border-border font-sans text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all">
+              <option value="">Select a service</option>
+              <option value="Makeup">Makeup</option>
+              <option value="Hairstyling">Hairstyling</option>
+              <option value="Mehndi">Mehndi</option>
+              <option value="Saree pre-pleating">Saree pre-pleating</option>
+              <option value="Saree draping">Saree draping</option>
+              <option value="Aari work">Aari work</option>
+              <option value="Hair accessories">Hair accessories</option>
+              <option value="Nail art">Nail art</option>
+              <option value="Chain">Chain</option>
+              <option value="Invisible chain">Invisible chain</option>
+              <option value="Rental jewellery">Rental jewellery</option>
+            </select>
+          </div>
+          <div>
+            <label class="block font-sans text-sm font-medium text-foreground mb-2">Preferred Date</label>
+            <input type="date" required class="w-full px-4 py-3 rounded-lg bg-background border border-border font-sans text-sm focus:outline-none focus:ring-2 focus:ring-gold/50 transition-all" />
+          </div>
+          <button type="submit" class="w-full gold-gradient py-4 rounded-full font-sans font-semibold text-primary-foreground tracking-wide hover:shadow-xl hover:scale-[1.02] transition-all duration-300">
+            Book Appointment
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ContactSection -->
+  <section id="contact" class="py-24">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-gold font-sans text-sm tracking-[0.3em] uppercase mb-3">Get In Touch</p>
+        <h2 class="section-heading">Contact <span class="gold-text">Us</span></h2>
+      </div>
+      <div class="max-w-2xl mx-auto glass-card rounded-2xl p-8 md:p-10 gold-border-glow">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-6">
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full gold-gradient flex items-center justify-center flex-shrink-0">
+                <i data-lucide="user" class="w-4 h-4 text-primary-foreground"></i>
+              </div>
+              <div>
+                <p class="font-serif font-semibold text-foreground">Name</p>
+                <p class="font-sans text-sm text-muted-foreground">Rajeshwari</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full gold-gradient flex items-center justify-center flex-shrink-0">
+                <i data-lucide="phone" class="w-4 h-4 text-primary-foreground"></i>
+              </div>
+              <div>
+                <p class="font-serif font-semibold text-foreground">Phone</p>
+                <p class="font-sans text-sm text-muted-foreground">+91 76038 69401</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-4">
+              <div class="w-10 h-10 rounded-full gold-gradient flex items-center justify-center flex-shrink-0">
+                <i data-lucide="map-pin" class="w-4 h-4 text-primary-foreground"></i>
+              </div>
+              <div>
+                <p class="font-serif font-semibold text-foreground">Location</p>
+                <p class="font-sans text-sm text-muted-foreground">Chennai, Tamil Nadu</p>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <a href="https://wa.me/c/917603869401" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 w-full py-3 rounded-full bg-[#128C7E] font-sans font-semibold text-primary-foreground hover:opacity-90 transition-opacity shadow-sm">
+              <i data-lucide="shopping-bag" class="w-5 h-5 mix-blend-screen text-primary-foreground"></i>
+              View WhatsApp Catalog
+            </a>
+            <a href="https://wa.me/917603869401" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 w-full py-3 rounded-full bg-[#25D366] font-sans font-semibold text-primary-foreground hover:opacity-90 transition-opacity shadow-sm">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+              </svg>
+              Chat on WhatsApp
+            </a>
+            <a href="https://www.instagram.com/raji__makeover__?igsh=MzlteDJzdHhnYzY5" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center gap-3 w-full py-3 rounded-full bg-gradient-to-r from-[#833AB4] via-[#FD1D1D] to-[#F77737] font-sans font-semibold text-primary-foreground hover:opacity-90 transition-opacity shadow-sm">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              Follow on Instagram
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 border-t border-border">
+    <div class="container mx-auto px-4 text-center">
+      <p class="font-serif text-lg font-semibold gold-text mb-2">Azhagi</p>
+      <p class="font-sans text-xs text-muted-foreground">© <span id="year">2024</span> Azhagi Beauty Services. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Button -->
+  <a href="https://wa.me/917603869401" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 animate-float" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="hsl(var(--primary-foreground))">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+  </a>
+
+  <script src="script.js"></script>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
