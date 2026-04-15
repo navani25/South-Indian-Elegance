@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Azhagi | South Indian Elegance</title>
+  <title>Raji Bridal Studio | South Indian Elegance</title>
+  <link rel="icon" type="image/jpeg" href="./assets/logo.jpg">
   
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -81,8 +82,9 @@
   <!-- Navbar -->
   <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent py-5 text-white">
     <div class="container mx-auto flex items-center justify-between px-4">
-      <a href="#home" class="font-serif text-2xl font-bold tracking-wide">
-        <span class="gold-text">Azhagi</span>
+      <a href="#home" class="flex items-center gap-3 font-serif text-2xl font-bold tracking-wide group">
+        <img id="navbar-logo" src="./assets/logo.jpg" alt="Raji Bridal Studio Logo" class="h-10 w-10 md:h-12 md:w-12 rounded-full border border-gold object-cover group-hover:scale-110 transition-transform cursor-pointer" />
+        <span class="gold-text">Raji Bridal Studio</span>
       </a>
 
       <!-- Desktop -->
@@ -160,82 +162,135 @@
         <p class="section-subheading mt-4">Each service is crafted with passion, precision, and a deep love for South Indian beauty traditions.</p>
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0s">
+        <div class="flex flex-col group glass-card rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0s">
           <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
             <i data-lucide="palette" class="w-7 h-7 text-primary-foreground"></i>
           </div>
-          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Makeup</h3>
-          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Flawless looks blending traditional beauty with modern trends for your perfect day.</p>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-center text-foreground">Makeup</h3>
+          <p class="font-sans text-sm text-center text-muted-foreground leading-relaxed flex-grow">All make-up services available for your perfect day.</p>
+          <div class="mt-6 pt-4 border-t border-border flex items-center justify-center gap-3">
+            <span class="font-serif text-xl font-bold text-gold">₹5,000</span>
+            <span class="font-sans text-sm text-muted-foreground line-through">₹10,000</span>
+          </div>
         </div>
-        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.1s">
+        <div class="flex flex-col group glass-card rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.1s">
           <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
             <i data-lucide="scissors" class="w-7 h-7 text-primary-foreground"></i>
           </div>
-          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Hairstyling</h3>
-          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Elegant updos, braids, and traditional styles perfectly matched to your event.</p>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-center text-foreground">Hair style</h3>
+          <p class="font-sans text-sm text-center text-muted-foreground leading-relaxed flex-grow">Elegant updos, braids, and traditional styles perfectly matched.</p>
+          <div class="mt-6 pt-4 border-t border-border flex items-center justify-center gap-3">
+            <span class="font-serif text-xl font-bold text-gold">₹700</span>
+            <span class="font-sans text-sm text-muted-foreground line-through">₹1,000</span>
+          </div>
         </div>
-        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.2s">
+        <div class="flex flex-col group glass-card rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.2s">
           <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
             <i data-lucide="pen-tool" class="w-7 h-7 text-primary-foreground"></i>
           </div>
-          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Mehndi</h3>
-          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Intricate and beautiful bridal and guest mehndi designs tailored to your preferences.</p>
-        </div>
-        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.3s">
-          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <i data-lucide="sparkles" class="w-7 h-7 text-primary-foreground"></i>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-center text-foreground">Mehandi</h3>
+          <p class="font-sans text-sm text-center text-muted-foreground leading-relaxed flex-grow">Intricate and beautiful bridal and guest mehndi designs.</p>
+          <div class="mt-6 pt-4 border-t border-border flex items-center justify-center gap-3">
+            <span class="font-serif text-xl font-bold text-gold">₹600</span>
+            <span class="font-sans text-sm text-muted-foreground line-through">₹1,000</span>
           </div>
-          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Saree pre-pleating</h3>
-          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Perfectly pleated sarees ready to drape in minutes. Professional pre-pleating for all fabrics.</p>
         </div>
-        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.4s">
+        <div class="flex flex-col group glass-card rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.3s">
           <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
             <i data-lucide="layers" class="w-7 h-7 text-primary-foreground"></i>
           </div>
-          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Saree draping</h3>
-          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Flawless, secure, and comfortable saree draping in various traditional and modern styles.</p>
-        </div>
-        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.5s">
-          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <i data-lucide="gem" class="w-7 h-7 text-primary-foreground"></i>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-center text-foreground">Saree pre-pleating</h3>
+          <p class="font-sans text-sm text-center text-muted-foreground leading-relaxed flex-grow">Perfectly pleated sarees ready to drape in minutes.</p>
+          <div class="mt-6 pt-4 border-t border-border flex items-center justify-center gap-3">
+            <span class="font-serif text-xl font-bold text-gold">₹250</span>
+            <span class="font-sans text-sm text-muted-foreground line-through">₹500</span>
           </div>
-          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Aari work</h3>
-          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Exquisite hand-embroidered Aari designs on blouses and sarees, featuring intricate motifs.</p>
         </div>
-        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.6s">
+        <div class="flex flex-col group glass-card rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.4s">
           <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <i data-lucide="crown" class="w-7 h-7 text-primary-foreground"></i>
+            <i data-lucide="droplets" class="w-7 h-7 text-primary-foreground"></i>
           </div>
-          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Hair accessories</h3>
-          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Curated collection of premium hair clips, pins, and bridal accessories in stunning finishes.</p>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-center text-foreground">Facial & Skincare</h3>
+          <p class="font-sans text-sm text-center text-muted-foreground leading-relaxed flex-grow">Facial, hair care, and skin treatments for a natural glow.</p>
+          <div class="mt-6 pt-4 border-t border-border flex items-center justify-center gap-3">
+            <span class="font-serif text-xl font-bold text-gold">₹250</span>
+            <span class="font-sans text-sm text-muted-foreground line-through">₹500</span>
+          </div>
         </div>
-        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.7s">
+        <div class="flex flex-col group glass-card rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.5s">
           <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
             <i data-lucide="hand" class="w-7 h-7 text-primary-foreground"></i>
           </div>
-          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Nail art</h3>
-          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Beautiful and elegant nail art designs to complete your gorgeous bridal or party look.</p>
-        </div>
-        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.8s">
-          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <i data-lucide="link" class="w-7 h-7 text-primary-foreground"></i>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-center text-foreground">Nail art</h3>
+          <p class="font-sans text-sm text-center text-muted-foreground leading-relaxed flex-grow">Beautiful and elegant nail art designs (no extension).</p>
+          <div class="mt-6 pt-4 border-t border-border flex items-center justify-center gap-3">
+            <span class="font-serif text-xl font-bold text-gold">₹1,500</span>
+            <span class="font-sans text-sm text-muted-foreground line-through">₹2,500</span>
           </div>
-          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Chain</h3>
-          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Traditional and modern chains available to completely elevate your elegance.</p>
         </div>
-        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.9s">
+        <div class="flex flex-col group glass-card rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.6s">
           <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-            <i data-lucide="link-2" class="w-7 h-7 text-primary-foreground"></i>
+            <i data-lucide="gift" class="w-7 h-7 text-primary-foreground"></i>
           </div>
-          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Invisible chain</h3>
-          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Trendy and subtle invisible chains for a minimalist and modern aesthetic.</p>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-center text-foreground">Baby shower function</h3>
+          <p class="font-sans text-sm text-center text-muted-foreground leading-relaxed flex-grow">Complete styling and makeup for baby shower events.</p>
+          <div class="mt-6 pt-4 border-t border-border flex items-center justify-center gap-3">
+            <span class="font-serif text-xl font-bold text-gold">₹5,000</span>
+            <span class="font-sans text-sm text-muted-foreground line-through">₹6,000</span>
+          </div>
         </div>
-        <div class="group glass-card rounded-2xl p-8 text-center hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 1.0s">
+        <div class="flex flex-col group glass-card rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.7s">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="camera" class="w-7 h-7 text-primary-foreground"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-center text-foreground">Photoshoot pics</h3>
+          <p class="font-sans text-sm text-center text-muted-foreground leading-relaxed flex-grow">Flawless makeup and styling for professional photoshoots.</p>
+          <div class="mt-6 pt-4 border-t border-border flex items-center justify-center gap-3">
+            <span class="font-serif text-xl font-bold text-gold">₹3,000</span>
+            <span class="font-sans text-sm text-muted-foreground line-through">₹5,000</span>
+          </div>
+        </div>
+        <div class="flex flex-col group glass-card rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.8s">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="crown" class="w-7 h-7 text-primary-foreground"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-center text-foreground">Bridal work</h3>
+          <p class="font-sans text-sm text-center text-muted-foreground leading-relaxed flex-grow">Premium complete bridal makeover and styling.</p>
+          <div class="mt-6 pt-4 border-t border-border flex items-center justify-center gap-3">
+            <span class="font-serif text-xl font-bold text-gold">₹8,000</span>
+            <span class="font-sans text-sm text-muted-foreground line-through">₹12,000</span>
+          </div>
+        </div>
+        <div class="flex flex-col group glass-card rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 0.9s">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="sparkles" class="w-7 h-7 text-primary-foreground"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-center text-foreground">Skintone Makeup</h3>
+          <p class="font-sans text-sm text-center text-muted-foreground leading-relaxed flex-grow">Perfectly matched makeup for a natural, glowing skin tone.</p>
+          <div class="mt-6 pt-4 border-t border-border flex items-center justify-center gap-3">
+            <span class="font-serif text-xl font-bold text-gold">₹6,500</span>
+            <span class="font-sans text-sm text-muted-foreground line-through">₹8,000</span>
+          </div>
+        </div>
+        <div class="flex flex-col group glass-card rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 1.0s">
+          <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+            <i data-lucide="gem" class="w-7 h-7 text-primary-foreground"></i>
+          </div>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-center text-foreground">Aari work</h3>
+          <p class="font-sans text-sm text-center text-muted-foreground leading-relaxed flex-grow">Exquisite hand-embroidered Aari designs on blouses.</p>
+          <div class="mt-6 pt-4 border-t border-border flex items-center justify-center gap-3">
+            <span class="font-serif text-xl font-bold text-gold">Price on Req.</span>
+          </div>
+        </div>
+        <div class="flex flex-col group glass-card rounded-2xl p-8 hover:shadow-2xl hover:-translate-y-2 transition-all duration-500 gold-border-glow cursor-pointer" style="animation-delay: 1.1s">
           <div class="w-16 h-16 mx-auto mb-6 rounded-full gold-gradient flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
             <i data-lucide="diamond" class="w-7 h-7 text-primary-foreground"></i>
           </div>
-          <h3 class="font-serif text-xl font-semibold mb-3 text-foreground">Rental jewellery</h3>
-          <p class="font-sans text-sm text-muted-foreground leading-relaxed">Premium bridal jewelry sets available for rent, making you shine on your big day.</p>
+          <h3 class="font-serif text-xl font-semibold mb-3 text-center text-foreground">Rental jewellery</h3>
+          <p class="font-sans text-sm text-center text-muted-foreground leading-relaxed flex-grow">Premium bridal jewelry sets and chains available for rent.</p>
+          <div class="mt-6 pt-4 border-t border-border flex items-center justify-center gap-3">
+            <span class="font-serif text-xl font-bold text-gold">Price on Req.</span>
+          </div>
         </div>
       </div>
     </div>
@@ -362,9 +417,9 @@
     <div class="container mx-auto px-4">
       <div class="max-w-4xl mx-auto text-center">
         <p class="text-gold font-sans text-sm tracking-[0.3em] uppercase mb-3">Our Story</p>
-        <h2 class="section-heading mb-8">About <span class="gold-text">Azhagi</span></h2>
+        <h2 class="section-heading mb-8">About <span class="gold-text">Raji Bridal Studio</span></h2>
         <p class="font-sans text-muted-foreground text-base md:text-lg leading-relaxed mb-6">
-          Born from a deep passion for South Indian beauty traditions, Azhagi is more than a beauty service — it's an experience. We believe every woman deserves to feel like a queen, especially on her most special day.
+          Born from a deep passion for South Indian beauty traditions, Raji Bridal Studio is more than a beauty service — it's an experience. We believe every woman deserves to feel like a queen, especially on her most special day.
         </p>
         <p class="font-sans text-muted-foreground text-base md:text-lg leading-relaxed mb-12">
           Our team of skilled artisans combines time-honored techniques with contemporary styles, ensuring each bride carries the grace of tradition and the glow of modern elegance. From intricate Aari embroidery to flawless bridal makeup, every detail is crafted with love and precision.
@@ -381,8 +436,8 @@
             <div class="w-12 h-12 mx-auto mb-3 rounded-full gold-gradient flex items-center justify-center">
               <i data-lucide="award" class="w-5 h-5 text-primary-foreground"></i>
             </div>
-            <p class="font-serif text-2xl font-bold text-foreground">10+</p>
-            <p class="font-sans text-xs text-muted-foreground mt-1">Years Experience</p>
+            <p class="font-serif text-2xl font-bold text-foreground">1</p>
+            <p class="font-sans text-xs text-muted-foreground mt-1">Year Experience</p>
           </div>
           <div class="text-center">
             <div class="w-12 h-12 mx-auto mb-3 rounded-full gold-gradient flex items-center justify-center">
@@ -412,7 +467,7 @@
             <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
             <i data-lucide="star" class="w-4 h-4 fill-gold"></i>
           </div>
-          <p class="font-sans text-sm text-muted-foreground leading-relaxed mb-6 italic">"Azhagi made me feel like a goddess on my wedding day. The bridal makeup was absolutely flawless — every detail was perfect!"</p>
+          <p class="font-sans text-sm text-muted-foreground leading-relaxed mb-6 italic">"Raji Bridal Studio made me feel like a goddess on my wedding day. The bridal makeup was absolutely flawless — every detail was perfect!"</p>
           <div><p class="font-serif font-semibold text-foreground">Priya Lakshmi</p><p class="font-sans text-xs text-gold">Bridal Makeup</p></div>
         </div>
         <div class="glass-card rounded-2xl p-8 gold-border-glow hover:-translate-y-1 transition-all duration-300">
@@ -521,7 +576,7 @@
               </div>
               <div>
                 <p class="font-serif font-semibold text-foreground">Location</p>
-                <p class="font-sans text-sm text-muted-foreground">Chennai, Tamil Nadu</p>
+                <p class="font-sans text-sm text-muted-foreground">Vikkiramangalam, Tamil Nadu</p>
               </div>
             </div>
           </div>
@@ -550,11 +605,22 @@
 
   <!-- Footer -->
   <footer class="py-8 border-t border-border">
-    <div class="container mx-auto px-4 text-center">
-      <p class="font-serif text-lg font-semibold gold-text mb-2">Azhagi</p>
-      <p class="font-sans text-xs text-muted-foreground">© <span id="year">2024</span> Azhagi Beauty Services. All rights reserved.</p>
+    <div class="container mx-auto px-4 text-center flex flex-col items-center">
+      <div class="flex items-center justify-center gap-3 mb-2 group">
+        <img id="footer-logo" src="./assets/logo.jpg" alt="Raji Bridal Studio Logo" class="h-8 w-8 rounded-full border border-gold object-cover group-hover:scale-110 transition-transform cursor-pointer" />
+        <p class="font-serif text-lg font-semibold gold-text">Raji Bridal Studio</p>
+      </div>
+      <p class="font-sans text-xs text-muted-foreground">© <span id="year">2024</span> Raji Bridal Studio. All rights reserved.</p>
     </div>
   </footer>
+
+  <!-- Logo Modal -->
+  <div id="logo-modal" class="fixed inset-0 z-[100] hidden flex items-center justify-center bg-background/90 backdrop-blur-sm opacity-0 transition-opacity duration-300">
+    <button id="close-modal" class="absolute top-6 right-6 text-foreground hover:text-gold transition-colors z-[101]">
+      <i data-lucide="x" class="w-8 h-8"></i>
+    </button>
+    <img id="modal-img" src="./assets/logo.jpg" alt="Raji Bridal Studio Logo Full" class="max-w-[90vw] max-h-[90vh] object-contain rounded-full border-2 border-gold shadow-2xl scale-95 transition-transform duration-300" />
+  </div>
 
   <!-- WhatsApp Button -->
   <a href="https://wa.me/917603869401" target="_blank" rel="noopener noreferrer" class="fixed bottom-6 right-6 z-50 w-14 h-14 bg-[#25D366] rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition-transform duration-300 animate-float" aria-label="Chat on WhatsApp">

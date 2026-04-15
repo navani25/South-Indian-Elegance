@@ -101,4 +101,48 @@ document.addEventListener('DOMContentLoaded', () => {
       }, 3000);
     });
   }
+
+  // --- Logo Modal Logic ---
+  const navbarLogo = document.getElementById('navbar-logo');
+  const footerLogo = document.getElementById('footer-logo');
+  const logoModal = document.getElementById('logo-modal');
+  const closeModal = document.getElementById('close-modal');
+  const modalImg = document.getElementById('modal-img');
+
+  function openLogoModal(e) {
+    e.preventDefault();
+    e.stopPropagation();
+    if (logoModal) {
+      logoModal.classList.remove('hidden');
+      setTimeout(() => {
+        logoModal.classList.remove('opacity-0');
+        if (modalImg) {
+          modalImg.classList.remove('scale-95');
+          modalImg.classList.add('scale-100');
+        }
+      }, 10);
+    }
+  }
+
+  function closeLogoModalAction() {
+    if (logoModal) {
+      logoModal.classList.add('opacity-0');
+      if (modalImg) {
+        modalImg.classList.remove('scale-100');
+        modalImg.classList.add('scale-95');
+      }
+      setTimeout(() => {
+        logoModal.classList.add('hidden');
+      }, 300);
+    }
+  }
+
+  if (navbarLogo) navbarLogo.addEventListener('click', openLogoModal);
+  if (footerLogo) footerLogo.addEventListener('click', openLogoModal);
+  if (closeModal) closeModal.addEventListener('click', closeLogoModalAction);
+  if (logoModal) {
+    logoModal.addEventListener('click', (e) => {
+      if (e.target === logoModal) closeLogoModalAction();
+    });
+  }
 });
