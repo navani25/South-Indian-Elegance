@@ -10,21 +10,23 @@ document.addEventListener('DOMContentLoaded', () => {
 
   window.addEventListener('scroll', () => {
     if (window.scrollY > 50) {
-      navbar.classList.add('bg-background/90', 'backdrop-blur-lg', 'shadow-md', 'py-3', 'text-foreground');
-      navbar.classList.remove('bg-transparent', 'py-5', 'text-white');
+      navbar.classList.add('scrolled');
+      navbar.classList.remove('transparent');
     } else {
-      navbar.classList.add('bg-transparent', 'py-5', 'text-white');
-      navbar.classList.remove('bg-background/90', 'backdrop-blur-lg', 'shadow-md', 'py-3', 'text-foreground');
+      navbar.classList.add('transparent');
+      navbar.classList.remove('scrolled');
     }
   });
 
   mobileMenuBtn.addEventListener('click', () => {
     mobileOpen = !mobileOpen;
     if (mobileOpen) {
+      mobileMenu.classList.add('open');
       mobileMenu.classList.remove('hidden');
       mobileMenuBtn.innerHTML = '<i data-lucide="x"></i>';
     } else {
-      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('open');
+      setTimeout(() => mobileMenu.classList.add('hidden'), 300); // Wait for transition
       mobileMenuBtn.innerHTML = '<i data-lucide="menu"></i>';
     }
     lucide.createIcons();
@@ -34,11 +36,56 @@ document.addEventListener('DOMContentLoaded', () => {
   mobileLinks.forEach(link => {
     link.addEventListener('click', () => {
       mobileOpen = false;
-      mobileMenu.classList.add('hidden');
+      mobileMenu.classList.remove('open');
+      setTimeout(() => mobileMenu.classList.add('hidden'), 300);
       mobileMenuBtn.innerHTML = '<i data-lucide="menu"></i>';
       lucide.createIcons();
     });
   });
+
+  // --- Dropdown Logic (Replaces Alpine.js) ---
+  const serviceDropdownBtn = document.getElementById('service-dropdown');
+  const serviceOptions = document.getElementById('service-options');
+  const serviceInput = document.getElementById('service-input');
+  const serviceSelectedText = document.getElementById('service-selected-text');
+  const serviceChevron = document.getElementById('service-chevron');
+  let dropdownOpen = false;
+
+  if (serviceDropdownBtn && serviceOptions) {
+    serviceDropdownBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      dropdownOpen = !dropdownOpen;
+      if (dropdownOpen) {
+        serviceOptions.classList.add('open');
+        serviceChevron.classList.add('rotate-180');
+      } else {
+        serviceOptions.classList.remove('open');
+        serviceChevron.classList.remove('rotate-180');
+      }
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', () => {
+      if (dropdownOpen) {
+        dropdownOpen = false;
+        serviceOptions.classList.remove('open');
+        serviceChevron.classList.remove('rotate-180');
+      }
+    });
+
+    // Handle selection
+    const items = serviceOptions.querySelectorAll('.dropdown-item');
+    items.forEach(item => {
+      item.addEventListener('click', (e) => {
+        const value = e.target.getAttribute('data-value');
+        serviceInput.value = value;
+        serviceSelectedText.textContent = value || 'Select a service';
+        dropdownOpen = false;
+        serviceOptions.classList.remove('open');
+        serviceChevron.classList.remove('rotate-180');
+      });
+    });
+  }
 
   // --- Before/After Slider Logic ---
   const sliderContainer = document.getElementById('ba-slider');
@@ -92,6 +139,8 @@ document.addEventListener('DOMContentLoaded', () => {
       
       // Reset form
       bookingForm.reset();
+      serviceSelectedText.textContent = 'Select a service';
+      serviceInput.value = '';
       
       // Remove toast
       setTimeout(() => {
@@ -107,33 +156,18 @@ document.addEventListener('DOMContentLoaded', () => {
   const footerLogo = document.getElementById('footer-logo');
   const logoModal = document.getElementById('logo-modal');
   const closeModal = document.getElementById('close-modal');
-  const modalImg = document.getElementById('modal-img');
 
   function openLogoModal(e) {
     e.preventDefault();
     e.stopPropagation();
     if (logoModal) {
-      logoModal.classList.remove('hidden');
-      setTimeout(() => {
-        logoModal.classList.remove('opacity-0');
-        if (modalImg) {
-          modalImg.classList.remove('scale-95');
-          modalImg.classList.add('scale-100');
-        }
-      }, 10);
+      logoModal.classList.add('open');
     }
   }
 
   function closeLogoModalAction() {
     if (logoModal) {
-      logoModal.classList.add('opacity-0');
-      if (modalImg) {
-        modalImg.classList.remove('scale-100');
-        modalImg.classList.add('scale-95');
-      }
-      setTimeout(() => {
-        logoModal.classList.add('hidden');
-      }, 300);
+      logoModal.classList.remove('open');
     }
   }
 
